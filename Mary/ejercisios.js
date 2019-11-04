@@ -25,5 +25,22 @@ var cuenta = {
 
 console.log ("El titular de la cuenta es", cuenta.titular);
 
+li>Crear un objeto Persona que contenga los siguientes atributos: nombre, apellido, dni, fecha de nacimiento y domicilio.</li>
+
+
+var Persona = new Object ();
+   Persona.nombre ="";
+   Persona.apellido ="";
+   Persona.dni ="";
+   Persona.fechadenacimiento ="";
+   Persona.domicilio ="";
+
+   
+
+
+
+
+
+
     
 
