@@ -1,0 +1,4 @@
+var persona = {
+    nombre: "Mauro",
+    
+}
