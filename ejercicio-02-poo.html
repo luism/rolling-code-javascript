@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+    var cuenta = {
+        titular: "Juan",
+        saldo: 0,
+        ingresa: function(monto){
+            this.saldo += monto; // saldo = saldo + monto
+        },
+        extraer: function(monto){
+            this.saldo -= monto;
+        },
+        informar: function(){
+            console.log("Ud cuenta con un saldo de " + this.saldo);
+        }
+    }
+
+    console.log("El titular de la cuenta es", cuenta.titular);
+    cuenta.informar();
+    cuenta.ingresa(5000);
+    cuenta.informar();
+    cuenta.extraer(1500);
+    cuenta.informar();
+    </script>
+</body>
+</html>
