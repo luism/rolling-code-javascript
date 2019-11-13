@@ -38,7 +38,7 @@ if( nota <= 2 ) {
 } else {
     alert("Introduce un numero valido.")
 }
-console.log ("Fin del programa.")
+console.log("Fin del programa.")
 
 /*Realiza un script que pida cadenas de texto  hasta que se pulse “cancelar”. Al salir con “cancelar” deben mostrarse todas las cadenas concatenadas con un guión -.*/
 
