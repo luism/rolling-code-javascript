@@ -4,10 +4,27 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Document</title>
+    <title>Filter List</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <script src="ejercicio.js"></script>
-    
+   <div class="container">
+       <h2>Colors</h2>
+
+       <input type="text" 
+       id="myInput"
+       onkeyup="myFilter()"
+       placeholder="Search for colors...">
+
+       <ul id="myUL">
+        <li><a href="#">Red</a></li>
+        <li><a href="#">Blue</a></li>
+        <li><a href="#">Green</a></li>
+        <li><a href="#">Yellow</a></li>
+        <li><a href="#">ORange</a></li>
+       </ul>
+   </div>
+
+    <script src="main.js"></script>
 </body>
 </html>
