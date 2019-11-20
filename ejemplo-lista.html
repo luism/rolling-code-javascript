@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Filter List</title>
+    <style>
+        body {
+            box-sizing: border-box;
+        }
+        
+        .container {
+            width: 900px;
+            margin: auto;
+            padding-top: 30px;
+        }
+        
+        #myInput {
+            width: 100%;
+            font-size: 16px;
+            padding: 12px 20px 12px 40px;
+            border: 1px solid #ddd;
+            margin-bottom: 12px;
+            outline: none;
+        }
+        
+        #myUL {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+        }
+        
+        #myUL li a {
+            display: block;
+            border: 1px solid #ddd;
+            margin-top: -1px;
+            background-color: #f6f6f6;
+            padding: 12px;
+            text-decoration: none;
+            font-size: 18px;
+            color: #000;
+        }
+        
+        #myUL li a:hover:not(.header) {
+            background-color: #eee;
+        }
+        
+        .oculto {
+            display: none;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <h1>Colors</h1>
+        <input type="text" id="myInput" onkeyup="myFilter()" placeholder="Search for colors...">
+        <input type="hidden" id="myValue" name="myValue">
+        <ul id="myUL">
+            <li><a href="#">Red</a></li>
+            <li><a href="#">Blue</a></li>
+            <li><a href="#">Green</a></li>
+            <li><a href="#">Yellow</a></li>
+            <li><a href="#">Orange</a></li>
+        </ul>
+    </div>
+
+    <script>
+        function showList() {
+            ul = document.getElementById("myUL");
+            ul.classList.remove("oculto");
+        }
+
+        function hideList() {
+            ul = document.getElementById("myUL");
+            ul.classList.add("oculto");
+        }
+
+        function myFilter() {
+            // Declare variables
+            var input, filter, ul, li, a, i, txtValue;
+            input = document.getElementById('myInput');
+            filter = input.value.toUpperCase();
+            ul = document.getElementById("myUL");
+            li = ul.getElementsByTagName('li');
+
+            // Loop through all list items, and hide those who don't match the search query
+            for (i = 0; i < li.length; i++) {
+                a = li[i].getElementsByTagName("a")[0];
+                txtValue = a.textContent || a.innerText;
+                if (txtValue.toUpperCase().indexOf(filter) > -1) {
+                    li[i].classList.remove("oculto");
+                } else {
+                    li[i].classList.add("oculto");
+                }
+            }
+        }
+        var objetoMio = {};
+        var mivaalor = objetoMio.nombre || "Pedro";
+        var otroEjemplo = (null) || "Juan"; // Para null, undefined y NaN el or se evalua y se asigna el valor de la derecha
+    </script>
+</body>
+
+</html>
