@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script>
+        var continuar = true;
+        var texto = '';
+        const SEPARADOR = '-';
+
+        while(continuar) {
+            texto += prompt('Ingrese un texto'); // texto = texto + prompt('....')
+            continuar = confirm('Desea continuar?');
+            if(continuar) {
+                texto += SEPARADOR; // -> texto = texto + SEPARADOR
+            }
+        }
+        alert(texto);
+        alert('Fin del programa.')
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

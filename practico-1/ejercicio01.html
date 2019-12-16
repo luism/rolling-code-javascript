@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script>
+        /* Tenemos tres tipos de ventanas pop up:
+            alert(mensaje)
+            prompt(mensaje) => abre el pop up esperando una entrada del usuario y devuelve la entra en forma de string
+            confirm(mensaje) => Muestra un pop up con botones "Aceptar" y "Cancelar" y devuelve true o false segun la eleccion del usuario.
+        */
+        var edad = parseInt(prompt('Ingrese edad:'));
+        if(edad) {
+            if(edad >= 18){
+                alert('Edad legal para conducir.')
+            } else {
+                alert('Edad no valida para conducir.');
+            }
+        } else {
+            alert("La edad no es válida.");
+        }
+
+        alert('Este se ejecuta despues de validar edad.');
+        // escribis otro ejercicio mas se ejecuta a continuacion.
+    </script>
+</head>
+<body>
+
+</body>
+</html>
