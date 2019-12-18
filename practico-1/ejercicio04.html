@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script>
+        var continua;
+        do {
+
+            var dni;
+
+            do {
+                dni = parseInt(prompt('Ingrese su numero de DNI:'));
+                if (isNaN(dni)) {
+                    alert('Debe ingresar un número.')
+                }
+            } while (isNaN(dni) || dni <= 0 || dni > 99999999)
+
+            var resto = dni % 23
+            var letra; // Esta variable solo se usa si la solucion es con el case
+            var letras = "TRWAGMYFPDXBNJZSQVHLCKE";
+
+            // Solucion con case:
+            // switch (resto) {
+            //     case 0:
+            //         letra = 'T'
+            //         break;
+            //     case 1:
+            //         letra = 'R'
+            //         break;
+            //     case 19:
+            //         letra = 'L';
+            //         alert('asigno L');
+            //         break;
+            //     case 20:
+            //         letra = 'C';
+            //         break;
+            //     default:
+            //         break;
+            // }
+            alert('Le corresponde la letra ' + letras[resto]);
+            continua = confirm('¿Desea continuar?')
+        } while (continua)
+    </script>
+</head>
+
+<body>
+
+</body>
+
+</html>
