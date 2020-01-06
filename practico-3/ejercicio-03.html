@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        class Rectangulo{
+            constructor(ancho, alto){
+                this.ancho = ancho;
+                this.alto = alto;
+            }
+
+            mostrarPropiedades(){
+                console.log("El ancho es de " + this.ancho + " y el alto es " + this.alto);
+            }
+
+            calcularPerimetro(){
+                return 2*this.ancho + 2*this.alto;
+            }
+
+            calcularArea(){
+                return this.ancho*this.alto;
+            }
+
+            set setAncho(nuevoAncho){
+                this.ancho = nuevoAncho;
+            }
+
+            get getAncho(){
+                return this.ancho;
+            }
+
+            set setAlto(alto){
+                this.alto = alto;
+            }
+
+            get getAlto(){
+                return this.alto;
+            }
+        }
+
+        var miRectangulo = new Rectangulo(10,5);
+        miRectangulo.mostrarPropiedades();
+        console.log(miRectangulo.calcularPerimetro());
+        console.log(miRectangulo.calcularArea());
+
+        miRectangulo.ancho = 30;
+    </script>
+</body>
+</html>

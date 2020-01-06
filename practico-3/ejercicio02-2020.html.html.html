@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        class Cuenta{
+            constructor(titular, saldo){
+                this.titular = titular;
+                this.saldo = saldo || 0.0;
+            }
+
+            ingresar(monto){
+                this.saldo += monto; //equivale a: this.saldo = this.saldo + monto
+            }
+
+            extraer(monto){
+                this.saldo -=monto;
+            }
+
+            informar(){
+                console.log("La cuenta de " + this.titular + " y el saldo es de : " + this.saldo);
+            }
+        }
+
+        var miCuenta = new Cuenta("Juan Perez", 50000);
+        miCuenta.informar();
+        miCuenta.ingresar(10000);
+        miCuenta.extraer(25000);
+        miCuenta.informar();
+    </script>
+</body>
+</html>

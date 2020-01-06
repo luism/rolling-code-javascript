@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        class Producto{
+            constructor(codigo, nombre, precio){
+                this.codigo = codigo;
+                this.nombre = nombre;
+                this.precio = precio;
+            }
+
+            imprimeDatos(){
+                console.log("Codigo: " + this.codigo + "\n Nombre " + this.nombre + "\n Precio $" + this.precio);
+            }
+        }
+        /* Las lienas siguientes son equivalentes. */
+        var productos = []; // defino producto como un arreglo.
+        // var productos = new Array();
+
+        productos.push(new Producto('123', 'Arroz', 35.5)) // con push agrego elementos al array
+        productos.push(new Producto('124', 'Gaseosa', 90.0))
+        productos.push(new Producto('125', 'Lavandina', 49.90))
+        /*
+        El array producto tiene 3 elementos. Entonces:
+        productos.length => 3
+
+        Entonces por cada vuelta el 'for' evaluará que i sea menos que 3
+
+        El 'for' empieza con i=0
+
+        i=0 -> 0 < 3 -> Si entonces ejecuta lo que esta adentro del for. Incremento el i -> i++
+        i=1 -> 1 < 3 -> Si entonces ejecuta lo que esta adentro del for. Incremento el i -> i++
+        i=2 -> 2 < 3 -> Si entonces ejecuta lo que esta adentro del for. Incremento el i -> i++
+        i=3 -> 3 < 3 -> No se ejecuta el for. Fin.
+
+        Tener en cuenta que dentro del for tengo disponible la varia 'i'.
+
+        Entonces puedo acceder a los elementos del array 'productos' de la siguiente forma:
+
+        productos[i]
+
+        */
+        for(var i = 0; i < productos.length; i++){
+            productos[i].imprimeDatos();
+        }
+
+        // El for en es equivalente a el siguente codigo:
+        productos[0].imprimeDatos();
+        productos[1].imprimeDatos();
+        productos[2].imprimeDatos();
+    </script>
+</body>
+</html>

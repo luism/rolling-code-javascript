@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script>
+        var miAuto = {
+            color: 'Rojo',
+            marca: 'Fiat',
+            modelo: 'Palio',
+            estado: 'apagado',
+            encender: function(){
+                if(this.estado == 'apagado'){
+                    this.estado = 'encendido';
+                    console.log('Auto encendido.');
+                } else {
+                    console.log('El auto ya esta encendido.')
+                }
+            },
+            apagar: function(){
+                if(this.estado == 'encendido'){
+                    this.estado = 'apagado';
+                    console.log('Auto apagado.');
+                } else {
+                    console.log('El auto esta apagado.');
+                }
+            }
+        }
+
+        miAuto.encender();
+        miAuto.apagar();
+        miAuto.apagar();
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

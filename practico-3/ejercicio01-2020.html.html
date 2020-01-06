@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>ejercicio 1 - bis</title>
+</head>
+
+<body>
+    <script>
+        // Creamos un objeto de la form literal que es usando corchetes.
+        var miObjeto = {
+            color: "Rojo",
+            marca: "Ford",
+            modelo: "Fiesta",
+            estado: "apagado",
+            /* Este atributo me indica si esta "encendido" o "apagado" */
+            encender: function () {
+                this.estado = "encendido";
+            },
+            apagar: function () {
+                this.estado = "apagado";
+            },
+        };
+
+        // console.log("El auto es de color " + miObjeto.color);
+        // console.log("El auto esta " + miObjeto.estado);
+        // miObjeto.encender();
+        // console.log("El auto esta " + miObjeto.estado);
+        // miObjeto.apagar();
+        // console.log("El auto esta " + miObjeto.estado);
+
+        /* Con ECMAScript6 podemos usar el concepto de POO usando class */
+        class Auto {
+            constructor(color, marca, modelo, estado) {
+                this.color = color;
+                this.marca = marca;
+                this.modelo = modelo;
+
+                this.estado = estado || "apagado";
+            }
+
+            encender(){
+                this.estado = "encendido";
+            }
+
+            apagar(){
+                this.estado = "apagado";
+            }
+        }
+
+        var miAuto = new Auto("Rojo", "Ford", "Fiesta"); // se ejecuta el contructor
+        console.log(miAuto);
+        miAuto.encender();
+        console.log(miAuto);
+
+        var miAuto = new Auto("Blanco", "Fiat", "Palio", "encendido"); // se ejecuta el contructor
+        console.log(miAuto);
+
+        var miNuevoAuto = new Auto();
+        miNuevoAuto.color = "Negro";
+        miNuevoAuto.marca = "volskwagen";
+        miNuevoAuto.modelo = "Gol";
+        console.log(miNuevoAuto);
+    </script>
+</body>
+
+</html>
